@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2&family=Dangrek&family=Secular+One&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -11,28 +13,29 @@
 }
 
 .title {
-    padding: 20px;
+    padding: 10px;
+    font-size: 4rem;
+    font-family: var(--kanit);
+    font-weight: 1000;
 }
 
 .options {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-        padding: 5px;
+    justify-content: space-evenly;
+    margin: 2px auto;
 }
 
 .select {
-    height: 5rem;
     background: black;
     color: white;
-    padding: 5px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-select {
+.box {
     font-size: 1.2rem;
     margin-top: 5px;
 }
@@ -46,4 +49,11 @@ select {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    font-family: var(--dangrek);
+    line-height: 1rem;
+}
+
+label {
+    font-size: 1.1rem;
+    font-weight: 600;
 }

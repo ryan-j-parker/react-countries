@@ -6,7 +6,7 @@ import CountryCard from './CountryCard.js';
 
 export default function Main() {
 
-  const countries = useCountries();
+  const { countries, loading } = useCountries();
   const [type, setType] = useState('all');
   const [sort, setSort] = useState('');
   const [search, setSearch] = useState('');
@@ -34,7 +34,7 @@ export default function Main() {
           
           <div className="options">
             <label htmlFor="continent">Sort by continent</label>
-            <select name="continent" value={type} onChange={(e) => {
+            <select className="box" name="continent" value={type} onChange={(e) => {
               setType(e.target.value);
             }}>
               <option value="all">All</option>
@@ -49,27 +49,27 @@ export default function Main() {
           </div>
           <div className="options">
             <label htmlFor="alphabet">Sort alphabetically</label>
-            <select name="alphabet" placeholder="" value={sort} onChange={(e) => {
+            <select className="box" name="alphabet" placeholder="" value={sort} onChange={(e) => {
               setSort(e.target.value);
             }}>
-              <option value="default"></option>
+              <option value="default" placeholder="default"></option>
               <option value="aToZ">A - Z</option>
               <option value="zToA">Z - A</option>
             </select>
           </div>
           <div className="options">
             <label htmlFor="search">Search by name</label>
-            <input name="search" placeholder="enter name" value={search} onChange={(e) => {
+            <input className="box" name="search" placeholder="enter name" value={search} onChange={(e) => {
               setSearch(e.target.value);
             }}></input>
           </div>
         </div>
-
-        <div className="flags">
+        { loading ? <h1>loading...</h1> : <div className="flags">
           {sortCountries().map((country) => (
             <CountryCard key={country.id} {...country} />
           ))}
         </div>
+        }
       </div>
     </>
   );
