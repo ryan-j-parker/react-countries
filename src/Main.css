@@ -10,16 +10,31 @@
     width: 100%;
 }
 
+.title {
+    padding: 20px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+        padding: 5px;
+}
+
 .select {
     height: 5rem;
     background: black;
     color: white;
-    padding: 15px;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 select {
     font-size: 1.2rem;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 .flags {
@@ -29,4 +44,6 @@ select {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }

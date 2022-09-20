@@ -4,8 +4,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 5px 20px;
-    padding: 1px;
+    margin: 25px 20px;
+    padding: 10px;
 }
 
 .country-card {
