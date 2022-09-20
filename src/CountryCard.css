@@ -1,0 +1,17 @@
+.country-container {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 1px;
+}
+
+.country-card {
+    height: 130px;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}

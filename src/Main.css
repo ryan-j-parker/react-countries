@@ -1,12 +1,32 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-main {
     background-color: black;
     color: white;
+}
+
+.main {
     height: 100vh;
-    width: 100vw;
-    font-size: 2rem;
+    width: 100%;
+}
+
+.select {
+    height: 5rem;
+    background: black;
+    color: white;
+    padding: 15px;
+}
+
+select {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.flags {
+    height: calc(100vh - 5rem);
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
