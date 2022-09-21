@@ -1,15 +1,17 @@
 import React from 'react';
 import { useState } from 'react';
 import './Main.css';
-import { useCountries } from './useCountries.js';
-import CountryCard from './CountryCard.js';
+import { useCountries } from '../hooks/useCountries.js';
+import CountryCard from '../CountryCard/CountryCard.js';
+import loadingSpinner from '../../src/loading-spinner.gif';
 
 export default function Main() {
 
-  const { countries, loading } = useCountries();
+  const { countries, loading, error } = useCountries();
   const [type, setType] = useState('all');
   const [sort, setSort] = useState('');
   const [search, setSearch] = useState('');
+
 
   const sortCountries = () => {
 
@@ -28,6 +30,7 @@ export default function Main() {
 
   return (
     <>
+      <p>{error}</p>
       <div className="main">
         <h1 className="title">Flags of the World</h1>
         <div className="select">
@@ -64,7 +67,7 @@ export default function Main() {
             }}></input>
           </div>
         </div>
-        { loading ? <h1>loading...</h1> : <div className="flags">
+        { loading ? <img className="loading-spinner" src={ loadingSpinner } /> : <div className="flags">
           {sortCountries().map((country) => (
             <CountryCard key={country.id} {...country} />
           ))}
